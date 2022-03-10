@@ -1,0 +1,16 @@
+package com.trungkien.backend.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+import com.trungkien.backend.entity.Intake;
+
+import java.util.List;
+import java.util.Optional;
+
+@Repository
+public interface IntakeRepository extends JpaRepository<Intake, Long> {
+    Optional<Intake> findByIntakeCode(String intakeCode);
+
+}
